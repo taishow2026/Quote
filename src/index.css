@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Microsoft JhengHei", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Print Specific Style Overrides to ensure gorgeous high quality PDF printouts */
+@media print {
+  /* Force system to display background colors and graphics */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Hide the entire header, sidebar panels, and formatting menus */
+  .no-print,
+  #set_default_profile_btn,
+  #save_draft_quote_btn,
+  #trigger_pdf_print_btn,
+  #add_new_quote_item_row_btn,
+  header,
+  section.lg\:col-span-4 {
+    display: none !important;
+  }
+
+  /* Make sure physical paper sheet covers 100% width, has no surrounding grey shadow/padding/border */
+  #quote-document-sheet {
+    width: 100% !important;
+    max-width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Turn inputs/textareas back into flat plain text values to prevent borders and shadow artifacts */
+  input, 
+  textarea, 
+  select {
+    border: none !important;
+    border-bottom: none !important;
+    background-color: transparent !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    color: #000000 !important;
+    pointer-events: none !important;
+    resize: none !important;
+    outline: none !important;
+  }
+
+  /* Set page margin quiet boundaries */
+  @page {
+    size: A4 portrait;
+    margin: 15mm 12mm 15mm 12mm;
+  }
+
+  /* Hide row reorder and delete actions column inside table */
+  th:last-child,
+  td:last-child {
+    display: none !important;
+  }
+}
+
+/* Custom scrollbar to keep sidebar record database looking sleek */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

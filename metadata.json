@@ -1,0 +1,6 @@
+{
+  "name": "線上報價單生成器",
+  "description": "一個精美、直覺且支援列印與 PDF 匯出的線上報價單生成器。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
