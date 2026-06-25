@@ -57,15 +57,15 @@ function validateTaiwanTaxId(taxId: string): { isValid: boolean; message: string
 
 const DEFAULT_SELLER_PROFILES: SellerSettings[] = [
   {
-    sellerName: '本島視覺整合工作室',
-    sellerTaxId: '24681357',
-    sellerContact: '王大明',
-    sellerPhone: '0987-654-321',
-    sellerEmail: 'contact@islandvisual.tw',
-    sellerAddress: '台北市信義區忠孝東路五段 1 號',
+    sellerName: '晉瑞國際開發股份有限公司',
+    sellerTaxId: '2840758',
+    sellerContact: '林欣潔',
+    sellerPhone: '0927-378620',
+    sellerEmail: 'service@taishow.com.tw',
+    sellerAddress: '嘉義市西區新民路1號',
     bankName: '首選跨國商業銀行 (007)',
     bankCode: '007',
-    bankAccountName: '本島視覺整合工作室',
+    bankAccountName: '晉瑞國際開發股份有限公司',
     bankAccountNumber: '123-456-78901'
   },
   {
